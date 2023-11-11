@@ -1,0 +1,11 @@
+.ipynb_checkpoints
+tmp_*
+
+__pycache__/
+.idea/
+.coverage.*
+.pytest_cache/
+
+logs/
+*.log
+*_env/
