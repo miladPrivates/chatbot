@@ -60,3 +60,6 @@ class Database:
         if not interaction:
             return None
         return interaction["messages"]
+
+    def close(self):
+        self.client.close()

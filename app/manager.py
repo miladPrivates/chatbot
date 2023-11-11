@@ -2,6 +2,7 @@ import logging
 from fastapi import FastAPI
 from controllers.routes import router
 import utils
+from database import Database
 
 app = FastAPI()
 app.include_router(router)
@@ -18,3 +19,4 @@ def startup_event():
 @app.on_event("shutdown")
 def shutdown_event():
     logger.info(f"app shutting down")
+    Database().close()
