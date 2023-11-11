@@ -10,5 +10,6 @@ __pycache__/
 .coverage.*
 .pytest_cache/
 
+logs/
 *.log
 *_env/
