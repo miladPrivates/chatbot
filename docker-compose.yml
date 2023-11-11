@@ -1,0 +1,19 @@
+version: '3'
+services:
+
+  app:
+    build: app
+    ports:
+      - '8073:8073'
+    depends_on:
+      - db
+    network_mode: 'host'
+
+
+  db:
+    image: mongo:5.0
+    container_name: 'mongo'
+    ports:
+      - '27017:27017'
+    volumes:
+      - .db:/data/db
